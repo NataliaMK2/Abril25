@@ -1,0 +1,21 @@
+<h2>dar de Alta / Eliminar</h2>  
+<div class="container">
+    <label>ID del producto</label> <br>
+    <input type="number" [(ngModel)]="producto.idProducto">
+    <br>
+    <label>Nombre del producto</label> <br>
+    <input type="text" [(ngModel)]="producto.nombreProducto">
+    <br>
+    <label>Precio del producto</label> <br>
+    <input type="number" [(ngModel)]="producto.precioUnitario">
+    <br>
+    <label>Unidades en Stock</label> <br>
+    <input type="number" [(ngModel)]="producto.unidadesEnStock">
+    <br>
+    <label>Categoría</label> <br>
+    <input type="number" [(ngModel)]="producto.categoria">
+    <br><br>
+    <button (click)="darAlta()">Enviar</button>
+    <button (click)="eliminarProducto()">Eliminar Producto</button>
+
+</div>
