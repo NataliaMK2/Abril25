@@ -1,27 +1,21 @@
 # Abril25
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.4.
+Este proyecto permite gestionar productos. 
+Se divide en dos partes: el back-end y el front-end.
 
-## Development server
+## Funcionalidades
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+La aplicación tiene las siguientes funcionalidades:
 
-## Code scaffolding
+- **Listado de productos**: Al acceder a http://localhost:4200/, la aplicación redirige automáticamente a la página de productos, donde se muestra un listado de todos los productos disponibles.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Alta y eliminación de productos**: Al acceder a http://localhost:4200/alta, se muestra un formulario que permite dar de alta y eliminar productos.
 
-## Build
+## Configuración del Back-end
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Para que la aplicación funcione correctamente, es necesario añadir la siguiente configuración en el controlador del back-end:
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```java
+@RestController
+@RequestMapping("/productos")
+@CrossOrigin(origins = "http://localhost:4200")
